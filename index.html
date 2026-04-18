@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Instagram Tracker</h1>
+        <p>Follower- und Interaktionsanalyse auf einen Blick</p>
+      </div>
+      <button id="loginBtn" class="btn primary">Mit Instagram verbinden</button>
+    </header>
+
+    <main>
+      <section class="status" id="statusCard">
+        <h2>Verbindungsstatus</h2>
+        <p id="authState">Nicht verbunden</p>
+        <p class="hint">
+          Hinweis: Für echtes Instagram-Login und Live-Daten brauchst du die
+          Instagram Graph API + Meta App Review.
+        </p>
+      </section>
+
+      <section>
+        <h2>Follower & Following</h2>
+        <div id="metricsGrid" class="grid metrics"></div>
+      </section>
+
+      <section>
+        <h2>Profile Interaction</h2>
+        <div id="interactionGrid" class="grid"></div>
+      </section>
+
+      <section class="lists">
+        <article>
+          <h3>Lost Follower</h3>
+          <ul id="lostFollowersList"></ul>
+        </article>
+        <article>
+          <h3>New Follower</h3>
+          <ul id="newFollowersList"></ul>
+        </article>
+        <article>
+          <h3>You don't follow back</h3>
+          <ul id="dontFollowBackList"></ul>
+        </article>
+        <article>
+          <h3>You follow each other</h3>
+          <ul id="mutualList"></ul>
+        </article>
+      </section>
+
+      <section class="lists">
+        <article>
+          <h3>Ghost Follower</h3>
+          <ul id="ghostFollowersList"></ul>
+        </article>
+        <article>
+          <h3>Top Follower</h3>
+          <ul id="topFollowersList"></ul>
+        </article>
+        <article>
+          <h3>Lost Following</h3>
+          <ul id="lostFollowingList"></ul>
+        </article>
+        <article>
+          <h3>Blocked / Unblocked you</h3>
+          <ul id="blockEventsList"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
